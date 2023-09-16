@@ -2,6 +2,7 @@ const gridContainer = document.querySelector('.grid-container');
 
 
 function changeGridResolution(){
+    gridContainer.innerHTML = '';
     let gridResolution = prompt("enter grid resolution");
 
     //Grid Resolution setter

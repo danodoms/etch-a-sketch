@@ -10,8 +10,8 @@
     flex-direction: column;
     margin: auto;
     border: 2px solid red;
-    width: 50 vw;
-    height: 50 vh;
+    width: 500px;
+    height: 500px;
 }
 
 .grid {
@@ -22,6 +22,7 @@
     background-color: black;
     width: 40px;
     height: 40px;
+    flex: 1 1 auto;
 }
 
 .hovered {
