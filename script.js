@@ -1,5 +1,5 @@
 const container = document.querySelector('.container');
-const gridTile = document.querySelectorAll('.grid-tile');
+
 
 
 for(let i=0; i<4; ++i){
@@ -13,8 +13,19 @@ for(let i=0; i<4; ++i){
     `;
 }
 
+const gridTiles = document.querySelectorAll('.grid-tile');
 
-gridTile.addEventListener('click', function () {
-    gridTile.classList.add('hovered');
+// grids.forEach(tile => {
+//     tile.addEventListener('mouseover', function () {
+//       tile.classList.add('hovered');
+//       console.log("hovered");
+//     });
+// });
+
+console.log("grid-tile count: " + gridTiles.length);
+gridTiles.forEach(tile =>{
+    tile.addEventListener('mouseover', function() {
+        tile.classList.add('hovered');
+    })
 });
 

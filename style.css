@@ -23,11 +23,6 @@
     height: 100px;
 }
 
-.grid-tile:hover {
-    /* transform: scale(1.05); */
-    transition: all 0.15s;
-}
-
 .hovered {
     background-color: blue;
 }
