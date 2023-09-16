@@ -1,17 +1,34 @@
 const container = document.querySelector('.container');
 
 
+let gridWidth = 100;
+let gridHeight = 100;
 
-for(let i=0; i<4; ++i){
-    container.innerHTML += `
-    <div class="grid">
-        <div class="grid-tile"></div>
-        <div class="grid-tile"></div>
-        <div class="grid-tile"></div>
-        <div class="grid-tile"></div>
-    </div>
-    `;
+//Grid Resolution setter
+for(let i=0; i<gridHeight; ++i){
+    let gridHolder = '<div class="grid">';
+    for(let x=0; x<gridWidth; ++x){
+        gridHolder+='<div class="grid-tile"></div>'
+    }
+    gridHolder+='</div>';
+    container.innerHTML+=gridHolder;
 }
+
+
+
+
+
+// container.innerHTML += `
+// <div class="grid">
+//     <div class="grid-tile"></div>
+//     <div class="grid-tile"></div>
+//     <div class="grid-tile"></div>
+//     <div class="grid-tile"></div>
+// </div>
+// `;
+
+
+
 
 const gridTiles = document.querySelectorAll('.grid-tile');
 
