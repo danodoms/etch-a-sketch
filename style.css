@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin: auto;
+}
+
+.grid {
+    display: flex;
+    gap: 8px;
+}
+
+.grid-tile {
+    background-color: black;
+    width: 100px;
+    height: 100px;
+}
+
+.grid-tile:hover {
+    /* transform: scale(1.05); */
+    transition: all 0.15s;
+}
+
+.hovered {
+    background-color: blue;
+}
