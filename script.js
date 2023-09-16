@@ -1,48 +1,29 @@
-const container = document.querySelector('.container');
+const gridContainer = document.querySelector('.grid-container');
 
 
-let gridWidth = 100;
-let gridHeight = 100;
+function changeGridResolution(){
+    let gridResolution = prompt("enter grid resolution");
 
-//Grid Resolution setter
-for(let i=0; i<gridHeight; ++i){
-    let gridHolder = '<div class="grid">';
-    for(let x=0; x<gridWidth; ++x){
-        gridHolder+='<div class="grid-tile"></div>'
-    }
+    //Grid Resolution setter
+    for(let i=0; i<gridResolution; ++i){
+        let gridHolder = '<div class="grid">';
+        for(let x=0; x<gridResolution; ++x){
+            gridHolder+='<div class="grid-tile"></div>'
+        }
     gridHolder+='</div>';
-    container.innerHTML+=gridHolder;
+    gridContainer.innerHTML+=gridHolder;
+    }
+
+    const gridTiles = document.querySelectorAll('.grid-tile');
+
+
+    console.log("grid-tile count: " + gridTiles.length);
+    gridTiles.forEach(tile =>{
+        tile.addEventListener('mouseover', function() {
+            tile.classList.add('hovered');
+        })
+    });
 }
 
 
-
-
-
-// container.innerHTML += `
-// <div class="grid">
-//     <div class="grid-tile"></div>
-//     <div class="grid-tile"></div>
-//     <div class="grid-tile"></div>
-//     <div class="grid-tile"></div>
-// </div>
-// `;
-
-
-
-
-const gridTiles = document.querySelectorAll('.grid-tile');
-
-// grids.forEach(tile => {
-//     tile.addEventListener('mouseover', function () {
-//       tile.classList.add('hovered');
-//       console.log("hovered");
-//     });
-// });
-
-console.log("grid-tile count: " + gridTiles.length);
-gridTiles.forEach(tile =>{
-    tile.addEventListener('mouseover', function() {
-        tile.classList.add('hovered');
-    })
-});
 

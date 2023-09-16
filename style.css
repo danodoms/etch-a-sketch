@@ -5,10 +5,13 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.container {
+.grid-container {
     display: flex;
     flex-direction: column;
     margin: auto;
+    border: 2px solid red;
+    width: 50 vw;
+    height: 50 vh;
 }
 
 .grid {
@@ -23,4 +26,9 @@
 
 .hovered {
     background-color: blue;
+}
+
+.header {
+    display: flex;
+    border: 2px solid green;
 }
